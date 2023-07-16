@@ -1,0 +1,32 @@
+{
+  "name": "todolist",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"nodemon -e scss -x \\\"yarn build:css\\\"\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:css": "node-sass public/css/style.scss src/style.min.css --output-style compressed",
+    "predev": "yarn build:css"
+  },
+  "dependencies": {
+    "antd": "^5.7.0",
+    "concurrently": "^8.2.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@vitejs/plugin-react": "^4.0.1",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "vite": "^4.4.0"
+  }
+}
