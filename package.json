@@ -1,11 +1,13 @@
 {
   "name": "todolist",
   "private": true,
+  "homepage": "./",
   "version": "0.0.0",
   "type": "module",
+  "start_url": ".",
   "scripts": {
     "dev": "concurrently \"vite\" \"nodemon -e scss -x \\\"yarn build:css\\\"\"",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview",
     "build:css": "node-sass public/css/style.scss src/style.min.css --output-style compressed",
     "predev": "yarn build:css"
